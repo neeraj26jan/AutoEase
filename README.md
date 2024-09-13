@@ -16,6 +16,17 @@
 - **Gamers**: Automate in-game actions for enhanced performance.
 - **General Users**: Simplify workflows and boost productivity with automated actions.
 
+## Dependencies
+* pyautogui
+* opencv-python
+* pyclick
+* numpy
+* asyncio
+* pynput
+
+We can install these all by giving command: <br />
+` pip install pyautogui opencv-python pyclick numpy asyncio pynput `
+
 ## Installation
 
 1. Clone this repository:
@@ -30,25 +41,26 @@
 
 ## Usage
 
-1. Import the necessary libraries and create an instance of the `AutoEase` class:
+1. First, we need to capture the area, part, or element of the screen or browser window where we want to perform the mouse or keyboard event. To achieve this, we will run the ` take_ss.py ` file, and after selecting the specific area with the mouse, we will save it as a JPEG image file inside the project's root directory. These image files will later be used in our main executable script, ` autoease.py `.
+2. Import the necessary libraries and create an instance of the `AutoEase` class:
    ```python
    from automate import AutoEase
    import time
    import webbrowser
-2. Open the web browser (in this case, Google) using the webbrowser module:
+3. Open the web browser (in this case, Google) using the webbrowser module:
    ```python
    webbrowser.open('https://www.google.com')
    time.sleep(3)  # Wait for the browser to load
-3. Create an instance of ` AutoEase `:
+4. Create an instance of ` AutoEase `:
    ```python
    autoease = AutoEase()
-4. Find UI elements based on image recognition with a minimum confidence level (e.g., finding the search box on Google):
+5. Find UI elements based on image recognition with a minimum confidence level (e.g., finding the search box on Google):
    ```python
    elements = autoease.find_elements('search.jpg', min_confidence=0.8)
-5. Type text into the found element (e.g., entering "Hello World!" in the Google search box):
+6. Type text into the found element (e.g., entering "Hello World!" in the Google search box):
    ```python
    autoease.type_at(elements[0], 'Hello World!')
-6. Find the "Google Search" button based on another image and simulate a click:
+7. Find the "Google Search" button based on another image and simulate a click:
    ```python
    elements = autoease.find_elements('google_search.jpg', min_confidence=0.8)
    autoease.click_at(elements[0])
@@ -79,7 +91,7 @@ autoease.click_at(elements[0])
 
 ## Incognito Mode:
 
-If you want to open browser in ` Incognito Mode ` then replace with these existing code lines in step No. 2:
+If you want to open the browser in Incognito Mode, replace the existing code lines with the following in Step No. 3.:
 
 ```python
 import subprocess
