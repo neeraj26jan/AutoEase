@@ -37,14 +37,14 @@ We can install these all by giving command: <br />
    cd autoease
 3. Run the application:
    ```bash
-   python autoease.py
+   python launch.py
 
 ## Usage
 
-1. First, we need to capture the area, part, or element of the screen or browser window where we want to perform the mouse or keyboard event. To achieve this, we will run the ` take_ss.py ` file, and after selecting the specific area with the mouse, we will save it as a JPEG image file inside the project's root directory. These image files will later be used in our main executable script, ` autoease.py `.
+1. First, we need to capture the area, part, or element of the screen or browser window where we want to perform the mouse or keyboard event. To achieve this, we will run the ` take_ss.py ` file, and after selecting the specific area with the mouse, we will save it as a JPEG image file inside the project's root directory. These image files will later be used in our executable script, ` launch.py `.
 2. Import the necessary libraries and create an instance of the `AutoEase` class:
    ```python
-   from automate import AutoEase
+   from autoease import AutoEase
    import time
    import webbrowser
 3. Open the web browser (in this case, Google) using the webbrowser module:
@@ -68,7 +68,7 @@ We can install these all by giving command: <br />
 ## Complete Example:
 
 ```python
-from automate import AutoEase
+from autoease import AutoEase
 import time
 import webbrowser
 
