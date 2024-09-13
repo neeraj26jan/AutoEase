@@ -1,20 +1,42 @@
 # AutoEase
 
-**AutoEase** is an intuitive and powerful automated keyboard and mouse software designed to streamline your workflows and enhance productivity. Whether you're performing repetitive tasks, automating clicks, or simulating complex keyboard sequences, AutoEase handles it all with precision and ease.
+**AutoEase** is a Python-based application designed to automate and simulate mouse and keyboard events. It enables users to perform repetitive tasks with ease by capturing specific screen areas and executing pre-defined actions such as clicks, typing, or navigation. Whether you're automating browser interactions, form filling, or simulating user input, **AutoEase** enhances productivity by streamlining tasks and reducing manual effort. Its intuitive functionality allows users to capture elements of the screen and use them for precise, automated actions in future workflows.
 
 ## Features
 
-- **Seamless Automation**: Automate keyboard inputs and mouse actions with ease.
-- **Customizable Macros**: Set up complex or repetitive tasks using customizable macros.
-- **Realistic Mouse Movements**: Simulate human-like mouse movements and clicks.
-- **User-Friendly Interface**: Simple and intuitive interface for easy setup and operation.
-- **Multi-App Automation**: Automate across multiple apps with task scheduling.
+- **Automated Mouse Events**: Simulate precise mouse movements, clicks, and drags on any captured screen area or browser window.
+  
+- **Automated Keyboard Input**: Type text into input fields or interact with applications by automating keyboard strokes.
 
-## Ideal for
+- **Screen Area Capture**: Easily capture specific areas of your screen as image references, and use them to trigger automated events.
 
-- **Professionals**: Save time on daily repetitive tasks.
-- **Gamers**: Automate in-game actions for enhanced performance.
-- **General Users**: Simplify workflows and boost productivity with automated actions.
+- **Image-based Element Detection**: Use image recognition to find UI elements on the screen and interact with them, ensuring accuracy in automation.
+
+- **Customizable Event Sequences**: Define and execute complex sequences of mouse and keyboard actions, tailored to your specific needs.
+
+- **Incognito Mode Support**: Launch browser windows in incognito mode for private automation tasks.
+
+- **Flexible Timing**: Adjust delays and timings between actions to create realistic or accelerated automation flows.
+
+- **User-Friendly Integration**: Seamlessly integrate **AutoEase** into your existing Python workflows for efficient automation.
+
+
+## Ideal For
+
+- **Developers and Testers**: Automate repetitive tasks, UI testing, and browser interactions with ease, saving time on manual testing and development workflows.
+
+- **Content Creators**: Streamline tasks such as form filling, web navigation, and data entry for creating smooth, hands-free demos and tutorials.
+
+- **Data Entry Professionals**: Automate data input processes for faster and more efficient work without sacrificing accuracy.
+
+- **Researchers and Analysts**: Simplify repetitive tasks, such as gathering data from web sources or automating interactions in research tools and applications.
+
+- **Gamers**: Set up complex in-game automation sequences to enhance gameplay and improve multitasking.
+
+- **IT Administrators**: Automate routine system tasks and processes, making server management or client-side automation effortless.
+
+- **Productivity Enthusiasts**: Reduce the manual effort involved in day-to-day repetitive tasks by automating workflows with minimal setup.
+
 
 ## Dependencies
 * pyautogui
@@ -31,7 +53,7 @@ We can install these all by giving command: <br />
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/autoease.git
+   git clone https://github.com/neeraj26jan/autoease.git
 2. Navigate to the project directory:
    ```bash
    cd autoease
