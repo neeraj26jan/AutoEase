@@ -1,42 +1,41 @@
 # AutoEase
 
-**AutoEase** is a Python-based application designed to automate and simulate mouse and keyboard events. It enables users to perform repetitive tasks with ease by capturing specific screen areas and executing pre-defined actions such as clicks, typing, or navigation. Whether you're automating browser interactions, form filling, or simulating user input, **AutoEase** enhances productivity by streamlining tasks and reducing manual effort. Its intuitive functionality allows users to capture elements of the screen and use them for precise, automated actions in future workflows.
+**AutoEase** is an application written with Python that is meant to automate or simulate mouse and keyboard clicks. It does this by allowing the user to carry out repetitive tasks with ease such as clicking, typing in or navigating certain predefined screen areas where certain predefined actions are executed. It doesn’t matter whether you want to simulate a browser and fill out forms, click around, or even add some AutoEase helps with performing such operations by cutting down the workload and letting the user only work on the most relevant issues. It has made it easier for users to capture certain portions of the screen, and these portions can in turn be used appropriately in future workflows requiring some form of automation.
 
 ## Features
 
-- **Automated Mouse Events**: Simulate precise mouse movements, clicks, and drags on any captured screen area or browser window.
+- **Automated Mouse Events**: Perform mechanical use of the mouse cursor such as movement, clicking, and dragging with the cursor on any image or web page element.
   
 - **Automated Keyboard Input**: Type text into input fields or interact with applications by automating keyboard strokes.
 
-- **Screen Area Capture**: Easily capture specific areas of your screen as image references, and use them to trigger automated events.
+- **Screen Area Capture**: Use a reference image created from screen captures to facilitate the occurrence of future predefined operations.
 
-- **Image-based Element Detection**: Use image recognition to find UI elements on the screen and interact with them, ensuring accuracy in automation.
+- **Image-based Element Detection**: Perform automation on the elements of the user interface located on the display using the images relevant to a computer program.
 
-- **Customizable Event Sequences**: Define and execute complex sequences of mouse and keyboard actions, tailored to your specific needs.
+- **Customizable Event Sequences**: Design and execute customized series of mouse or keyboard events for performing complex tasks.
 
-- **Incognito Mode Support**: Launch browser windows in incognito mode for private automation tasks.
+- **Incognito Mode Support**: Spare incognito browser windows for execution of the scripts requiring loss of validation.
 
-- **Flexible Timing**: Adjust delays and timings between actions to create realistic or accelerated automation flows.
+- **Flexible Timing**: Control how actions are launched in automation making realistic or time-compressed automation flows.
 
-- **User-Friendly Integration**: Seamlessly integrate **AutoEase** into your existing Python workflows for efficient automation.
+- **User-Friendly Integration**: Integration of AutoEase into existing Python scripts for various purposes where automation is required without any complexity.
 
 
-## Ideal For
+## Perfect For
 
-- **Developers and Testers**: Automate repetitive tasks, UI testing, and browser interactions with ease, saving time on manual testing and development workflows.
+- **Developers and Quality Assurance**: Make repetitive activities such as UI testing and browser activity easier by saving time spent on manual testing and development disciplines.
 
-- **Content Creators**: Streamline tasks such as form filling, web navigation, and data entry for creating smooth, hands-free demos and tutorials.
+- **Content Creators**: Simplify some activities, such as filling instruction pages, navigating to web pages, and inputting data to make easier high-quality demos and trainings.
 
-- **Data Entry Professionals**: Automate data input processes for faster and more efficient work without sacrificing accuracy.
+- **Data Entry Experts**: Reduce the time that it would take to perform these data input activities without compromising on quality.
 
-- **Researchers and Analysts**: Simplify repetitive tasks, such as gathering data from web sources or automating interactions in research tools and applications.
+- **Research and Analysis**: Reduce repetitive work such as collecting information from the web or automating the use of research applications.
 
-- **Gamers**: Set up complex in-game automation sequences to enhance gameplay and improve multitasking.
+- **Gamers**: Configure such that specific combinations of complex multi keystroke and mouse click sequences are executed in-game to allow for heightened play and multi tasking.
 
-- **IT Administrators**: Automate routine system tasks and processes, making server management or client-side automation effortless.
+- **IT Administrators**: Simplify simple administrative tasks and operations to make the work of managing the server or doing client’s side automation very minimal.
 
-- **Productivity Enthusiasts**: Reduce the manual effort involved in day-to-day repetitive tasks by automating workflows with minimal setup.
-
+- **Productivity Enthusiasts**: When doing repetitive processes in day to day operations of organizations, it is possible to automate and make at least a fraction of the work to be done without loosing so much of the original workflows.
 
 ## Dependencies
 * pyautogui
@@ -63,26 +62,26 @@ We can install these all by giving command: <br />
 
 ## Usage
 
-1. First, we need to capture the area, part, or element of the screen or browser window where we want to perform the mouse or keyboard event. To achieve this, we will run the ` take_ss.py ` file, and after selecting the specific area with the mouse, we will save it as a JPEG image file inside the project's root directory. These image files will later be used in our executable script, ` launch.py `.
-2. Import the necessary libraries and create an instance of the `AutoEase` class:
+1. First, it is essential to determine the area (part or element) of the screen or browser's window where mouse or keyboard event is to occur. For this,” therefore,” we run the take_ss.py file, that allows you to take amp, for example, a mouse pointer and select an area that we will thereafter save such as a JPEG image inside the project’s folder. Those image files will later be used in execution of our script ‘launch.py’.
+2. Import the required libraries to create an instance of AutoEase class:
    ```python
    from autoease import AutoEase
    import time
    import webbrowser
-3. Open the web browser (in this case, Google) using the webbrowser module:
+3. Use a webbrowser module to launch a web browser for this example 'Google.com':
    ```python
    webbrowser.open('https://www.google.com')
    time.sleep(3)  # Wait for the browser to load
 4. Create an instance of ` AutoEase `:
    ```python
    autoease = AutoEase()
-5. Find UI elements based on image recognition with a minimum confidence level (e.g., finding the search box on Google):
+5. Locate UI elements using image based approaches with the set minimum confidence level. For example here we will locate the Google search box in an image:
    ```python
    elements = autoease.find_elements('search.jpg', min_confidence=0.8)
-6. Type text into the found element (e.g., entering "Hello World!" in the Google search box):
+6. Insert the provided text on the indicated area (example, "Hello World!" typed on the textbo located at Google search):
    ```python
    autoease.type_at(elements[0], 'Hello World!')
-7. Find the "Google Search" button based on another image and simulate a click:
+7. Search for Elements for the image “Google Search” and click on the button by simulating the click:
    ```python
    elements = autoease.find_elements('google_search.jpg', min_confidence=0.8)
    autoease.click_at(elements[0])
